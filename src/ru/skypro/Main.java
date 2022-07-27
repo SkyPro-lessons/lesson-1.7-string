@@ -55,18 +55,8 @@ public class Main {
     public static void task3() {
         System.out.println("Task 3");
         String fullName = "Иванов Семён Семёнович";
-        if (fullName.contains("ё")) {
-            StringBuilder fullNameCorrect = new StringBuilder();
-            char[] fullNameChar = fullName.toCharArray();
-            for (int i = 0; i < fullNameChar.length; i++) {
-                if (fullNameChar[i] == 'ё') {
-                    fullNameChar[i] = 'е';
-                }
-                fullNameCorrect.append(fullNameChar[i]);
-            }
-            fullName = fullNameCorrect.toString();
-        }
-        System.out.println(fullName);
+        String fullNameCorrect = fullName.replace('ё', 'е');
+        System.out.println("Данные ФИО сотрудника - " + fullNameCorrect);
         System.out.println();
     }
 }
