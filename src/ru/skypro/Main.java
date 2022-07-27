@@ -55,15 +55,18 @@ public class Main {
     public static void task3() {
         System.out.println("Task 3");
         String fullName = "Иванов Семён Семёнович";
-        StringBuilder fullNameCorrect = new StringBuilder();
-        char[] fullNameChar = fullName.toCharArray();
-        for (int i = 0; i < fullNameChar.length; i++) {
-            if (fullNameChar[i] == 'ё') {
-                fullNameChar[i] = 'е';
+        if (fullName.contains("ё")) {
+            StringBuilder fullNameCorrect = new StringBuilder();
+            char[] fullNameChar = fullName.toCharArray();
+            for (int i = 0; i < fullNameChar.length; i++) {
+                if (fullNameChar[i] == 'ё') {
+                    fullNameChar[i] = 'е';
+                }
+                fullNameCorrect.append(fullNameChar[i]);
             }
-            fullNameCorrect.append(fullNameChar[i]);
+            fullName = fullNameCorrect.toString();
         }
-        System.out.println(fullNameCorrect);
+        System.out.println(fullName);
         System.out.println();
     }
 }
